@@ -1,0 +1,144 @@
+#1
+x={}
+print(x,type(x))
+
+
+
+
+#add
+x["name"]="ram"
+print(x)
+print(x["name"])
+#update
+x["name"]="sita"
+print()
+x[101]="stud data"
+print(x)
+#del
+del x[101]
+print(x)
+ 
+
+#2
+x={}
+#key=input("enter key")
+#value=input("enter value")
+#x[key]=value
+#print(x)
+#x.update({"name":"ram"})
+#x.update({"name":"sita"})
+#x.update({"age":"70"})
+#print(x)
+
+
+
+#3
+x={}
+stud={
+    "name":"ram",
+    "age":20,
+    "div":"A"
+    
+}
+
+print(stud.keys())
+print(stud.values())
+print(stud.items())
+
+for key,values in stud.items():
+    print(key,values)
+
+
+#4
+#dict->list
+stud={
+    "name":"sanika",
+    "age":20,
+    "div":"A",
+    "marks":[100,56,78],
+    "sub":["maths","english","pyhsics"],
+    "roll no":29
+}    
+for values in stud.values():
+    if type (values)==list:
+        for i in values:
+
+
+
+#5
+product={
+    101:{
+        "productname":"car",
+        "price":10000,
+        "color":"black",
+        "qty":10,
+        "models":[501,502]
+        
+    }
+}
+print(product[101]["color"])
+
+
+#key
+for v in product.values():
+    for k,v in  v.items():
+        print(k,v)
+
+
+#set#6
+x=set()
+print(type(x))
+x.add(30)
+print(x)
+
+
+x={10,20,30,10}
+print(x)
+
+
+xl=list(x)
+print(xl[0])
+
+
+xl[2]=90
+print(xl)
+x=set(xl)
+print(x,type(x))
+
+#7 #operations
+A={1,2,3}
+B={3,4,5}
+print(A.union(B))
+print(A|B)
+
+
+print(A.intersection(B))
+print(A&B)
+
+print(A.difference(B))
+print(B-A)
+
+print(A.symmetric_difference(B))
+print(A^B)
+
+#8 frozen set
+x=frozenset([10,20,30])
+print(x,type(x))
+#x.add(90)
+#print(x)
+
+for i in x:
+    print(i)
+    
+print(200 in x)
+
+x=frozenset([10,20,30])
+print(x,type(x))
+
+x=frozenset("hello")
+print(x,type(x))
+
+x=frozenset({101:"hjhj",102:"hjhjhj"})
+print(x,type(x))
+            print(i)
+        print(values)
