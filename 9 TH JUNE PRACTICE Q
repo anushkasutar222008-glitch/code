@@ -1,0 +1,78 @@
+#1
+players = [
+    (1, "Virat", 98),
+    (2, "Rohit", 100),
+    (3, "Vaibhav", 99),
+    (4, "Mahi", 101)
+]
+
+# 1. Max score and player name
+m = max(players, key=lambda x: x[2])
+print("Max Score:", m[2])
+print("Player Name:", m[1])
+
+# 2. Total Score
+total = 0
+for i in players:
+    total += i[2]
+print("Total Score:", total)
+
+# 3. Top 3 Players
+top3 = sorted(players, key=lambda x: x[2], reverse=True)[:3]
+
+print("Top 3 Players:")
+for i in top3:
+    print(i[1], "-", i[2])
+
+
+
+#2 
+products = []
+
+while True:
+    print("\n1.View")
+    print("2.Add")
+    print("3.Update")
+    print("4.Delete")
+    print("5.Search")
+    print("6.Exit")
+
+    ch = int(input("Enter choice: "))
+
+    if ch == 1:
+        print("Products:", products)
+
+    elif ch == 2:
+        p = input("Enter product name: ")
+        products.append(p)
+
+    elif ch == 3:
+        old = input("Enter product to update: ")
+        if old in products:
+            new = input("Enter new product name: ")
+            i = products.index(old)
+            products[i] = new
+        else:
+            print("Product not found")
+
+    elif ch == 4:
+        p = input("Enter product to delete: ")
+        if p in products:
+            products.remove(p)
+        else:
+            print("Product not found")
+
+    elif ch == 5:
+        p = input("Enter product to search: ")
+        if p in products:
+            print("Product Found")
+        else:
+            print("Product Not Found")
+
+    elif ch == 6:
+        break
+
+    else:
+        print("Invalid Choice")
+
+
