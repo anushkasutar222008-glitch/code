@@ -1,0 +1,112 @@
+* INHERITANCE *
+
+#1(dmart.py)
+class dmart:
+    store_name="Dmart"
+    def_init_(self,category,product_name,price,quantity):
+        self.category=category
+        self.product_name=product_name
+        self.price=price
+        self.quantity=quantity
+@class method
+    def display_store_details(self)
+         return f"store_name -->(cls.storename)"
+    def common_features(self):
+         return f"category:{self.category}\n product_name:{self.product_name}\n quantity:{self.quantity}\n price:{self.price}
+
+
+
+
+
+#2(clothes.py)
+from dmart import dmart
+class clothes(dmart):
+    def_init_(self,category,product_name,price,quantity,size,color):
+        super()_init_(self,category,product_name,price,quantity):
+            self.size=size
+            self.color=color
+    def display_clothes_details(self)
+       print(super()display_store_details())
+       print(super().common.features())
+       return f"color:(self.color)\nsize:(self.size)"
+   
+
+
+#3(grocery.py)
+from dmart import dmart
+class grocery(dmart):
+    def_init_(self,category,product_name,price,quantity,brand_name,mfg,exp):
+                super()_init_(self,category,product_name,price,quantity):
+                self.brand_name=brand_name
+                self.mfg=mfg
+                self.exp=exp
+def display_grocery_details(self):
+    print(super().display_store_details())
+       print(super().common.features())
+        return f"brand_name:{self,brand_name"}\nmfg :{self,mfg}\nexp:{self,exp}""
+
+
+#4 (main.py)
+from grocery import grocery
+ c=clothes("clothes","jeans",100,799,"black","m");
+ g=grocery("grocery_section","sugar",60,100,"sugarlite","2026-04-01","2027-06-01")
+ 
+ while=true:
+     print("welcome to dmart\n1.grocery section\n2.clothing_section\n3.exit\n")
+     choice=int(input("enter your choice !\n"))
+     match choice:
+         case 1:
+             print(g.display_grocery_details())
+         case 2:
+             print(c.display_clothes_details())
+         case 3:
+             print("thank you !")
+         
+             break;
+         case 4:
+             print("invalid choice")
+
+
+
+
+#5(TASK 1)
+class product:
+    def__init__(self,pno,qty,price):
+        self.pno=pno
+        self.qty=qty
+        self.price=price
+
+
+
+from Derived_class import Bill
+n=int(input("enter number of products:"))
+
+for i in range(n):
+    print("\nEnter Product Details",i+1)
+    
+    pno=int(input("enter product number:"))
+    qty=int(input("enter quantity:"))
+    price=int(input("enter price"))
+    
+    obj = bill(pno,qty,price)
+    obj.calculate_total()
+    obj.display()
+
+
+
+  from base_class import product
+
+class bill(product)
+     def calculate_total(self)
+         self(total=self.qty*self.price)
+    
+    def display(self):
+        print("\nproduct no:",self.pno)
+        print("\quantity:",self.qty)
+
+        print("\price:",self.price)
+
+        print("\Total amt:",self.total)
+
+
+    
