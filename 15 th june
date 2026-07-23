@@ -1,0 +1,46 @@
+# to find sqaure 
+def square(n):
+    return n * n
+
+num = int(input("Enter a number: "))
+print("Square =", square(num))
+
+
+
+def even_odd(n):
+    if n % 2 == 0:
+        print("Even Number")
+    else:
+        print("Odd Number")
+
+num = int(input("Enter a number: "))
+even_odd(num)
+
+
+
+def maximum(a, b):
+    if a > b:
+        return a
+    else:
+        return b
+
+x = int(input("Enter first number: "))
+y = int(input("Enter second number: "))
+
+print("Maximum =", maximum(x, y))
+
+
+#exception handling
+try:
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
+
+    result = a / b
+    print("Result =", result)
+
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+
+
+
+
