@@ -1,0 +1,36 @@
+Polymorphism is the ability of the same method or function to behave differently for different objects.
+
+method overrriding
+class Animal:
+    def sound(self):
+        print("Animal makes a sound")
+
+class Dog(Animal):
+    def sound(self):
+        print("Dog barks")
+
+class Cat(Animal):
+    def sound(self):
+        print("Cat meows")
+
+d = Dog()
+c = Cat()
+
+d.sound()
+c.sound()
+
+
+diff classes same methods
+class Bird:
+    def sound(self):
+        print("Bird chirps")
+
+class Lion:
+    def sound(self):
+        print("Lion roars")
+
+b = Bird()
+l = Lion()
+
+b.sound()
+l.sound()
