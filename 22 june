@@ -1,0 +1,27 @@
+Encapsulation is the process of wrapping data and methods together into a single class and controlling access to the data.
+
+
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    def display(self):
+        print("Name:", self.name)
+        print("Marks:", self.marks)
+        
+
+s = Student("Anushka", 85)
+s.display()
+
+
+encapsulation with private data
+class Bank:
+    def __init__(self):
+        self.__balance = 5000   # Private variable
+
+    def show_balance(self):
+        print("Balance =", self.__balance)
+
+b = Bank()
+b.show_balance()
