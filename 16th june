@@ -1,0 +1,27 @@
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def display(self):
+        print("Name:", self.name)
+        print("Age:", self.age)
+
+s = Student("Anushka", 20)
+s.display()
+
+
+
+class Employee:
+    def __init__(self, empid, name, salary):
+        self.empid = empid
+        self.name = name
+        self.salary = salary
+
+    def display(self):
+        print("Employee ID:", self.empid)
+        print("Name:", self.name)
+        print("Salary:", self.salary)
+
+e = Employee(101, "Rahul", 30000)
+e.display()
