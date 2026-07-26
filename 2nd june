@@ -1,0 +1,20 @@
+. What is Git?
+Git is a version control system used to track changes in source code.
+
+2. What is GitHub?
+GitHub is a cloud-based platform that hosts Git repositories and supports collaboration.
+
+3. What is a repository?
+A repository (repo) is a storage location for a project's files and version history.
+
+4. What is git init?
+It initializes a new Git repository in the current folder.
+
+5. What does git add . do?
+It stages all changed files for the next commit.
+
+6. What is git commit?
+It saves a snapshot of the staged changes with a message.
+
+7. What is git push?
+It uploads your local commits to the remote GitHub repository.
