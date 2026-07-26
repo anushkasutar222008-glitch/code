@@ -1,0 +1,34 @@
+import sqlite3
+
+conn = sqlite3.connect("student.db")
+cursor = conn.cursor()
+
+print("Database Connected Successfully")
+
+
+create a database table
+import sqlite3
+
+conn = sqlite3.connect("student.db")
+cursor = conn.cursor()
+
+print("Database Connected Successfully")
+
+
+create a table
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS student (
+    id INTEGER PRIMARY KEY,
+    name TEXT,
+    age INTEGER
+)
+""")
+
+conn.commit()
+
+
+insert data
+cursor.execute("INSERT INTO student VALUES (1, 'Anushka', 18)")
+conn.commit()
+
+print("Record Inserted")
