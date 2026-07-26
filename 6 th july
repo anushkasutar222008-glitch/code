@@ -1,0 +1,59 @@
+CREATE DATABASE student_management;
+
+USE student_management;
+
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50),
+    course VARCHAR(50),
+    attendance INT
+);
+
+INSERT INTO students(name, course, attendance)
+VALUES
+('Anushka','Computer Engineering',92),
+('Rahul','Computer Engineering',88),
+('Priya','IT',95);
+
+
+
+connect to mysql
+import mysql.connector
+
+conn = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="your_password",
+    database="student_management"
+)
+
+cursor = conn.cursor()
+
+cursor.execute("SELECT COUNT(*) FROM students")
+total_students = cursor.fetchone()[0]
+
+print("Total Students:", total_students)
+
+conn.close()
+
+
+
+
+fetch all students
+import mysql.connector
+
+conn = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="your_password",
+    database="student_management"
+)
+
+cursor = conn.cursor()
+
+cursor.execute("SELECT * FROM students")
+
+for row in cursor.fetchall():
+    print(row)
+
+conn.close()
