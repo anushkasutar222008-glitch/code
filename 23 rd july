@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Form</title>
+</head>
+<body>
+
+<h2>Student Registration</h2>
+
+<form method="POST">
+    {% csrf_token %}
+
+    Name:
+    <input type="text" name="name"><br><br>
+
+    Age:
+    <input type="number" name="age"><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
+
+
+from django import forms
+
+class StudentForm(forms.Form):
+    name = forms.CharField(max_length=100)
+    age = forms.IntegerField()
+    email = forms.EmailField()
+
+
+Why {% csrf_token %} is Used
+
+It protects your form from Cross-Site Request Forgery (CSRF) attacks. Include it in every POST form.
+
+{% csrf_token %}
