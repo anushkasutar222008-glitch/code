@@ -1,0 +1,117 @@
+install mysql connector
+pip install mysql-connector-python
+
+import module
+import mysql.connector
+
+
+connect to mysql databse
+import mysql.connector
+
+conn = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="your_password",
+    database="student_db"
+)
+
+cursor = conn.cursor()
+
+print("Database Connected Successfully")
+
+
+
+create a table
+query = """
+CREATE TABLE IF NOT EXISTS student (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    age INT
+)
+"""
+
+cursor.execute(query)
+print("Table Created")
+
+
+insert data
+query = "INSERT INTO student VALUES (%s, %s, %s)"
+values = (1, "Anushka", 18)
+
+cursor.execute(query, values)
+conn.commit()
+
+print("Record Inserted")
+
+
+
+display data
+query = "SELECT * FROM student"
+
+cursor.execute(query)
+
+records = cursor.fetchall()
+
+for row in records:
+    print(row)
+
+
+    update data
+    query = "UPDATE student SET age = %s WHERE id = %s"
+values = (19, 1)
+
+cursor.execute(query, values)
+conn.commit()
+
+print("Record Updated")
+
+
+delete data
+query = "DELETE FROM student WHERE id = %s"
+values = (1,)
+
+cursor.execute(query, values)
+conn.commit()
+
+print("Record Deleted")
+
+
+
+
+examplee
+import mysql.connector
+
+# Connect to MySQL
+conn = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="your_password",
+    database="student_db"
+)
+
+cursor = conn.cursor()
+
+# Create table
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS student(
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    age INT
+)
+""")
+
+# Insert data
+query = "INSERT INTO student VALUES (%s, %s, %s)"
+values = (1, "Rahul", 20)
+
+cursor.execute(query, values)
+conn.commit()
+
+# Display data
+cursor.execute("SELECT * FROM student")
+
+for row in cursor.fetchall():
+    print(row)
+
+# Close connection
+conn.close()
