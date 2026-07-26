@@ -1,0 +1,117 @@
+1. Ordered List (<ol>)
+Displays items with numbers.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ordered List</title>
+</head>
+<body>
+
+<h2>Programming Languages</h2>
+
+<ol>
+    <li>Python</li>
+    <li>Java</li>
+    <li>HTML</li>
+    <li>CSS</li>
+</ol>
+
+</body>
+</html>
+
+
+2. Unordered List (<ul>)
+
+Displays items with bullets.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unordered List</title>
+</head>
+<body>
+
+<h2>Subjects</h2>
+
+<ul>
+    <li>DBMS</li>
+    <li>Python</li>
+    <li>Java</li>
+    <li>Web Development</li>
+</ul>
+
+</body>
+</html>
+
+
+A table is used to display data in rows and columns.
+
+Basic Table
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Table</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        table, th, td{
+            border: 1px solid black;
+        }
+
+        th, td{
+            padding: 10px;
+            text-align: center;
+        }
+
+        th{
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Student Details</h2>
+
+<table>
+    <tr>
+        <th>Roll No</th>
+        <th>Name</th>
+        <th>Course</th>
+    </tr>
+
+    <tr>
+        <td>101</td>
+        <td>Anushka</td>
+        <td>Computer Engineering</td>
+    </tr>
+
+    <tr>
+        <td>102</td>
+        <td>Rahul</td>
+        <td>Information Technology</td>
+    </tr>
+
+    <tr>
+        <td>103</td>
+        <td>Priya</td>
+        <td>Electronics</td>
+    </tr>
+
+</table>
+
+</body>
+</html>
+
+
+Tag	Purpose
+<table>	Creates a table
+<tr>	Creates a table row
+<th>	Creates a table heading
+<td>	Creates a table data cell
+rowspan	Merges rows
+colspan	Merges columns
+border	Adds a border (HTML attribute, though CSS is preferred)
