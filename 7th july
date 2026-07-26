@@ -1,0 +1,28 @@
+binary operation in DB
+# db.py
+
+data = b"Hello World"
+
+with open("data.bin", "wb") as file:
+    file.write(data)
+
+print("Data written successfully.")
+
+
+
+read from binary file
+# db.py
+
+with open("data.bin", "rb") as file:
+    data = file.read()
+
+print(data)
+
+
+append to binry file
+# db.py
+
+with open("data.bin", "ab") as file:
+    file.write(b" Python")
+
+print("Data appended successfully.")
