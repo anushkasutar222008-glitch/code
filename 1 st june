@@ -1,0 +1,37 @@
+How to Create a GitHub Account
+Step 1
+Open: https://github.com
+
+Step 2
+Click Sign up.
+
+Step 3
+Enter: Email Address Password Username
+
+Step 4
+Verify your email address.
+
+Step 5
+Complete the verification (if prompted).
+
+Step 6
+Your GitHub account is now ready.
+
+Create Your First Repository
+Log in to GitHub.
+Click the + icon (top-right).
+Select New repository.
+Enter a repository name (e.g., Python-Basics).
+Choose Public or Private.
+(Optional) Check Add a README file.
+Click Create repository.
+
+
+Create a Basic Python Program
+
+print("Hello, GitHub!")
+print("Welcome to Python")
+
+Output
+Hello, GitHub!
+Welcome to Python
