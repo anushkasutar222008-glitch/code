@@ -1,0 +1,68 @@
+Step 2: Create a Templates Folder
+
+Project structure:
+
+myproject/
+│
+├── myapp/
+│   ├── templates/
+│   │   └── home.html
+│   ├── views.py
+│   └── urls.py
+│
+├── myproject/
+├── manage.py
+
+
+Step 4: Create the View
+
+views.py
+
+from django.shortcuts import render
+
+def home(request):
+    return render(request, "home.html")
+
+
+Step 5: Create URLs
+
+urls.py (inside your app)
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home, name='home'),
+]
+
+Project urls.py
+
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('myapp.urls')),
+]
+
+
+
+Step 6: Run the Server
+python manage.py runserver
+
+example
+<div class="container mt-5">
+    <div class="card" style="width:300px;">
+        <div class="card-body">
+            <h4 class="card-title">Student</h4>
+            <p class="card-text">
+                Welcome to Django Bootstrap.
+            </p>
+            <a href="#" class="btn btn-primary">
+                View Profile
+            </a>
+        </div>
+    </div>
+</div>
+
+http://127.0.0.1:8000/
